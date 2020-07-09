@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+console.log(process.env);
 // dependencies
 // yarn add express cors wtilio
 
@@ -9,8 +9,8 @@ const twilio = require('twilio')
 
 // twilio rewuierments texting api
 
-cont accountSid = "" // TWILIO SID NUM 
-cont authToken = "" // TWILIO AUTH TOKEN
+cont accountSid = process.env.ACCOUNT_SID // TWILIO SID NUM 
+cont authToken = process.env.AUTH_TOKEN// TWILIO AUTH TOKEN
 cont clinet = (accountSid, authToken)
 
 
@@ -37,7 +37,7 @@ app.get('/send-text', (reg, res) => {
     clinet.messages.create({
         body: textmessage,
         to: recipient,
-        from: '################', //NUMBER FROM TWILIO HERE
+        from: process.env.PHONE_NUMBER, //NUMBER FROM TWILIO HERE
     }).then((message) => console.log(message.body))
 })
 
