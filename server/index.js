@@ -9,12 +9,12 @@ const twilio = require('twilio')
 
 // twilio rewuierments texting api
 
-cont accountSid = process.env.ACCOUNT_SID // TWILIO SID NUM 
-cont authToken = process.env.AUTH_TOKEN// TWILIO AUTH TOKEN
-cont clinet = (accountSid, authToken)
+const accountSid = process.env.ACCOUNT_SID // TWILIO SID NUM 
+const authToken = process.env.AUTH_TOKEN// TWILIO AUTH TOKEN
+const clinet = (accountSid, authToken)
 
 
-cont app = express();  //alias
+const app = express();  //alias
 
 
 app.use(cors());  //blocks browser from resticting data
