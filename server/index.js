@@ -11,7 +11,7 @@ const twilio = require('twilio')
 
 const accountSid = process.env.ACCOUNT_SID // TWILIO SID NUM 
 const authToken = process.env.AUTH_TOKEN// TWILIO AUTH TOKEN
-const clinet = (accountSid, authToken)
+const clinet = require('twilio')(accountSid, authToken) //new twilio(accountSid, authToken)
 
 
 const app = express();  //alias
@@ -44,7 +44,7 @@ app.get('/send-text', (reg, res) => {
 
 //local host port 4000
 
-app.listen(4000, () => console.log("on port 4000"))
+app.listen(3000, () => console.log("on port 4000"))
 
 
 
