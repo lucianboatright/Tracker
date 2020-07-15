@@ -11,7 +11,7 @@ const twilio = require('twilio')
 
 const accountSid = process.env.ACCOUNT_SID // TWILIO SID NUM 
 const authToken = process.env.AUTH_TOKEN// TWILIO AUTH TOKEN
-const clinet = require('twilio')(accountSid, authToken) //new twilio(accountSid, authToken)
+const clinet = new twilio(accountSid, authToken)
 
 
 const app = express();  //alias
