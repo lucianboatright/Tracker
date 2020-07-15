@@ -26,7 +26,7 @@ app.get('/', (reg, res) => {
 // twilio text
 app.get('/send-text', (reg, res) => {
     // GET variables via query string
-    res.send("Hello to the twilio sever")
+
     const { recipient, textmessage } = reg.query
 
 
