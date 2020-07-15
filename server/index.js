@@ -44,7 +44,7 @@ app.get('/send-text', (reg, res) => {
 
 //local host port 4000
 
-app.listen(3000, () => console.log("on port 4000"))
+app.listen(4000, () => console.log("on port 4000"))
 
 
 
