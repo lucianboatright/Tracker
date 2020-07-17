@@ -9,7 +9,7 @@ const twilio = require('twilio');
 // twilio rewuierments texting api
 const accountSid = process.env.ACCOUNT_SID; // TWILIO SID NUM 
 const authToken = process.env.AUTH_TOKEN;// TWILIO AUTH TOKEN
-const client = new twilio(accountSid, authToken); //require('twilio')(accountSid, authToken)
+const client = require('twilio')(accountSid, authToken);
 
 
 const app = express();  //alias
