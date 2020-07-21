@@ -19,22 +19,27 @@ app.use(cors());  //blocks browser from resticting data
 
 
 //welcome page server
-app.get('/', (reg, res) => {
+app.get('/', (req, res) => {
     res.send("WElcome to the express server");
 })
 
 // twilio text
-app.get('/send-text', (reg, res) => {
+app.get('/send-text', (req, res) => {
     // GET variables via query string
-
-    const { recipient, textmessage } = reg.query
-
+    console.log("HELLO WORLD FROM INSIDE GET TEXT");
+    const { recipient, textmessage } = req.query;
+    console.log("1",recipient, "2",textmessage );
 
     client.messages.create({
         body: textmessage,
         to: recipient,
         from: process.env.PHONE_NUMBER, //NUMBER FROM TWILIO HERE
     }).then((message) => console.log(message.body))
+    .catch(err => {
+        console.log(err);
+        res.send(JSON.stringify({ success: false }));
+      });
+      res.send("MESSAGE SENT");
 })
 
 

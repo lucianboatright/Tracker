@@ -15,7 +15,7 @@ class textButton extends Component {
     sendText = () => {
         const { text } = this.state
         //pass veriables within the query string
-        fetch(`http://localhost:4000/send-text?recipient=${text.recipient}&testmessage=${text.textmessage}`,console.log(text.recipient, text.textmessage))
+        fetch(`http://localhost:4000/send-text?recipient=${text.recipient}&textmessage=${text.textmessage}`,console.log(text.recipient, text.textmessage))
         .catch(err => console.log(err))
     }
 
