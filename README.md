@@ -32,4 +32,3 @@ The other NMEA sentences provide additional information:
     $GPVTG – Velocity made good - $GPVTG,,T,,M,0.291,N,0.538,K,A*27
 
 
-and more text
