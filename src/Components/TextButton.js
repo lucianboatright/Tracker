@@ -39,17 +39,17 @@ class textButton extends Component {
                 </header>
                 <div sytle={{ margin: 10 }}>
                     <h2>Send text form</h2>
-                    <label>Enter Your Phone Number</label>
+                    <label>Enter The Phone Number</label>
                     <br />
                     <input value={text.recipient}
                             onChange={e => this.setState({ text: {...text, recipient: e.target.value} })} />
                     <div style={spacer} />
-                    <label>Enter Message Below and Submit</label>
+                    <label>Enter A Message Below and Submit</label>
                     <br />
                     <textarea rows={3} value={text.textmessage} style={textArea}
                         onChange={e => this.setState({ text: {...text, textmessage: e.target.value} })} />
                     <div style={spacer} />
-                    <button onClick={this.sendText}>Send Text</button>
+                    <button onClick={this.sendText}>Send Message</button>
                 
                 </div>
             </div>
