@@ -39,7 +39,7 @@ class textButton extends Component {
                 </header>
                 <div sytle={{ margin: 10 }}>
                     <h2>Send text form</h2>
-                    <label>Enter The Phone Number</label>
+                    <label>Enter The Phone Number Below</label>
                     <br />
                     <input value={text.recipient}
                             onChange={e => this.setState({ text: {...text, recipient: e.target.value} })} />

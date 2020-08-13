@@ -19,7 +19,7 @@ EXAMPLE STRING - $GPGGA,110617.00,41XX.XXXXX,N,00831.54761,W,1,05,2.68,129.0,M,5
     empty field – DGPS station ID number
     *42 – the checksum data, always begins with *
 
-The other NMEA sentences provide additional information:
+The other NMEA sentences provide additional information sent from the unit:
 
     $GPGSA – GPS DOP and active satellites - $GPGSA,A,3,06,04,17,01,19,03,22,09,,,,,2.62,1.17,2.34*01
 
