@@ -44,7 +44,7 @@ class textButton extends Component {
                     <input value={text.recipient}
                             onChange={e => this.setState({ text: {...text, recipient: e.target.value} })} />
                     <div style={spacer} />
-                    <label>Enter A Message Below and Press Submit</label>
+                    <label>Enter A Message Below and Press Submit Button</label>
                     <br />
                     <textarea rows={3} value={text.textmessage} style={textArea}
                         onChange={e => this.setState({ text: {...text, textmessage: e.target.value} })} />
