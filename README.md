@@ -62,3 +62,9 @@ The other NMEA sentences provide additional information sent from the GPS unit:
 
 ![neo-6](src/Images/Modules/neo_6m_module.jpg)
 
+## Other Setups
+I have played with several other types of setups to try to get to the same result. 
+The AG9 module is a GPS and SIM capable module that could cut out some of the separations of modules, however, this project was not based around being super-efficient in size, power, or complexity. Instead of separating out each module and working with each individually, I am learning much more about how to communicate and handle the data for each module. 
+However, this module will allow me to create a connection with a server and constantly upload my position meaning I won't need to have a data logger on the hardware side. 
+
+![ag9_module](src/Images/Modules/ag9_module.jpg)
