@@ -20,18 +20,18 @@ This module will be used to send the data over to the website. This will either 
 2. Create a data connection to my server and upload intomation either constantly or on request. 
 (constant upload would be manages but saving data with the same date, info on request would be triggered by an sms from the website which will trigger the arduino to compress the gps inforamtion and send it up to the server in one go)
 
+It is possible to track yourself using this sim800l but it is based on a triagulation from signal towers and due to the fidelity of information recived this is not always very accurate, the position is based of signal strength and estimating distances whcih is why I have used the Neo-6m module whcish is accurate to within 1m.
+
 This module does require a working sim card and works liek a very simple mobile phone allowing me to make and recive calles and messages as well as data.
 There are many different types of antena that will change the level of connection you can find in a given area.
 ![sim800l](src/Images/Modules/sim800l_module.jpg)
+<!-- The project has been to build a website to allow people to follow me when I go cycling. This was to be done via a webiste were the user can click a button on a page in which a google map will be rendered with my current position and previous positions saved during ride. In addition I will be building the GPS tracker from teh hardware up in order to resarch GPS, and Celular communication. You can see pictures of the project and list of hardware bwlow. -->
 
-
-
-
-The project has been to build a website to allow people to follow me when I go cycling. This was to be done via a webiste were the user can click a button on a page in which a google map will be rendered with my current position and previous positions saved during ride. In addition I will be building the GPS tracker from teh hardware up in order to resarch GPS, and Celular communication. You can see pictures of the project and list of hardware bwlow.
-
-
-## Interesting Resarch 
-The Neo-6m connects to the Arduino and send the following information which can be parsed into the following information.
+#### Ne0-6m GPS module
+The Neo-6m is my intereface with the satalites. There are many realy interesting things one can do with this module. 
+This module produces a set of NEMA strings once it connects to three or more satalite. 
+They need three satalites to allow triangulation to work out your position thoough more satalitesd will increse the fidelity or consitancy of connection.
+I am only interested in one of the strings caculated by the module: GPGLL string which only gives logtitude and latatude as well
 
 EXAMPLE STRING - $GPGGA,110617.00,41XX.XXXXX,N,00831.54761,W,1,05,2.68,129.0,M,50.1,M,,*42
 
@@ -59,4 +59,5 @@ The other NMEA sentences provide additional information sent from the GPS unit:
 
     $GPVTG – Velocity made good - $GPVTG,,T,,M,0.291,N,0.538,K,A*27
 
+![neo-6](src/Images/Modules/neo_6m_module.jpg)
 
