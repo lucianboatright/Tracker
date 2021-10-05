@@ -11,7 +11,7 @@ Below you can see some of my resarch and pictures of the modules I have used. I 
 
 ### Modules
 Arduino linked up to the Neo-6m GPS module, the data logger module. At this part of the porject I am testing weather I can create a connection and save the NEMA strings to the data logger. This was a succsess though I need to work on how to store the data more cleanly as its currenltly creates and saves to a new file each time it is able to generate the correct NMEA string. 
-![arduino](Images/Modules/arduino__gps-data.jpg)
+![arduino](src/Images/Modules/arduino_gps-data.jpg)
 
 
 The project has been to build a website to allow people to follow me when I go cycling. This was to be done via a webiste were the user can click a button on a page in which a google map will be rendered with my current position and previous positions saved during ride. In addition I will be building the GPS tracker from teh hardware up in order to resarch GPS, and Celular communication. You can see pictures of the project and list of hardware bwlow.
