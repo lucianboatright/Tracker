@@ -10,8 +10,21 @@ Below you can see some of my resarch and pictures of the modules I have used. I 
 2. How to connect and make them commuincate between each other. 
 
 ### Modules
+#### Arduino + Neo-6m + Data logger
 Arduino linked up to the Neo-6m GPS module, the data logger module. At this part of the porject I am testing weather I can create a connection and save the NEMA strings to the data logger. This was a succsess though I need to work on how to store the data more cleanly as its currenltly creates and saves to a new file each time it is able to generate the correct NMEA string. 
 ![arduino](src/Images/Modules/arduino_gps-data.jpg)
+
+#### SIM800L 
+This module will be used to send the data over to the website. This will either can be done in two ways.
+1. Use sms messaging through twilio to send information over to my website.
+2. Create a data connection to my server and upload intomation either constantly or on request. 
+(constant upload would be manages but saving data with the same date, info on request would be triggered by an sms from the website which will trigger the arduino to compress the gps inforamtion and send it up to the server in one go)
+
+This module does require a working sim card and works liek a very simple mobile phone allowing me to make and recive calles and messages as well as data.
+There are many different types of antena that will change the level of connection you can find in a given area.
+![sim800l](src/Images/Modules/sim800l_module.jpg)
+
+
 
 
 The project has been to build a website to allow people to follow me when I go cycling. This was to be done via a webiste were the user can click a button on a page in which a google map will be rendered with my current position and previous positions saved during ride. In addition I will be building the GPS tracker from teh hardware up in order to resarch GPS, and Celular communication. You can see pictures of the project and list of hardware bwlow.
