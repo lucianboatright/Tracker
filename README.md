@@ -1,4 +1,19 @@
 # Tracker Build 
+The goal of this project is two fold.
+1. Learn new languages that enable me to interface with hardware like Arduino's and Modules like GPS modules and data loggers.
+2. Build a full stack website to enable people to see where I have been riding using an overlay on a map. 
+To work with most of the hardware I have had to learn a rudimantry understanding of C++ as well as how many of the hardware modules actualy work. 
+For example I am using the Neo-6m module that allows me to tracking my position based on my GPS cordinates (rarther than using cell towers to triangulate my position which is possible but much less accurate). This lead me to learn about NMEA data that is being calculated in the module which informa me on things like positions but can also tell me speed, altitude and more. 
+
+Below you can see some of my resarch and pictures of the modules I have used. I hade done two stages of resarch.
+1. How does each module work 
+2. How to connect and make them commuincate between each other. 
+
+### Modules
+Arduino linked up to the Neo-6m GPS module, the data logger module. At this part of the porject I am testing weather I can create a connection and save the NEMA strings to the data logger. This was a succsess though I need to work on how to store the data more cleanly as its currenltly creates and saves to a new file each time it is able to generate the correct NMEA string. 
+![arduino](src/Images/Modules/arduino__gps-data.jpg)
+
+
 The project has been to build a website to allow people to follow me when I go cycling. This was to be done via a webiste were the user can click a button on a page in which a google map will be rendered with my current position and previous positions saved during ride. In addition I will be building the GPS tracker from teh hardware up in order to resarch GPS, and Celular communication. You can see pictures of the project and list of hardware bwlow.
 
 
