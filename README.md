@@ -14,20 +14,6 @@ Below you can see some of my research and pictures of the modules I have used. I
 Arduino linked up to the Neo-6m GPS module, the data logger module. At this part of the project, I am testing whether I can create a connection and save the NEMA strings to the data logger. This was a success though I need to work on how to store the data more cleanly as it currently creates and saves to a new file each time it is able to generate the correct NMEA string. 
 ![arduino](src/Images/Modules/arduino_gps-data.jpg)
 
-#### SIM800L 
-This module will be used to send the data over to the website. This will either can be done in two ways.
-1. Use SMS messaging through twilio to send information over to my website.
-2. Create a data connection to my server and upload information either constantly or on request. 
-(constant upload would be managed but saving data with the same date, info on request would be triggered by an SMS from the website which will trigger the arduino to compress the GPS information and send it up to the server in one go)
-
-It is possible to track yourself using this sim800l but it is based on triangulation from signal towers and due to the fidelity of information received this is not always very accurate, the position is based on signal strength and estimating distances which is why I have used the Neo-6m module which is accurate to within 1m.
-
-This module does require a working sim card and works like a very simple mobile phone allowing me to make and receive calls and messages as well as data.
-There are many different types of antena that will change the level of connection you can find in a given area.
-
-![sim800l](src/Images/Modules/sim800l_module.jpg)
-<!-- The project has been to build a website to allow people to follow me when I go cycling. This was to be done via a webiste were the user can click a button on a page in which a google map will be rendered with my current position and previous positions saved during ride. In addition I will be building the GPS tracker from teh hardware up in order to resarch GPS, and Celular communication. You can see pictures of the project and list of hardware bwlow. -->
-
 #### Ne0-6m GPS module
 The Neo-6m is my interface with the satellites. There are many really interesting things one can do with this module. 
 This module produces a set of NEMA strings once it connects to three or more satellites.. 
@@ -61,6 +47,22 @@ The other NMEA sentences provide additional information sent from the GPS unit:
     $GPVTG – Velocity made good - $GPVTG,,T,,M,0.291,N,0.538,K,A*27
 
 ![neo-6](src/Images/Modules/neo_6m_module.jpg)
+
+#### SIM800L 
+This module will be used to send the data over to the website. This will either can be done in two ways.
+1. Use SMS messaging through twilio to send information over to my website.
+2. Create a data connection to my server and upload information either constantly or on request. 
+(constant upload would be managed but saving data with the same date, info on request would be triggered by an SMS from the website which will trigger the arduino to compress the GPS information and send it up to the server in one go)
+
+It is possible to track yourself using this sim800l but it is based on triangulation from signal towers and due to the fidelity of information received this is not always very accurate, the position is based on signal strength and estimating distances which is why I have used the Neo-6m module which is accurate to within 1m.
+
+This module does require a working sim card and works like a very simple mobile phone allowing me to make and receive calls and messages as well as data.
+There are many different types of antena that will change the level of connection you can find in a given area.
+
+![sim800l](src/Images/Modules/sim800l_module.jpg)
+<!-- The project has been to build a website to allow people to follow me when I go cycling. This was to be done via a webiste were the user can click a button on a page in which a google map will be rendered with my current position and previous positions saved during ride. In addition I will be building the GPS tracker from teh hardware up in order to resarch GPS, and Celular communication. You can see pictures of the project and list of hardware bwlow. -->
+
+
 
 ## Other Setups
 I have played with several other types of setups to try to get to the same result. 
