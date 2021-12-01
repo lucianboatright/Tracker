@@ -69,7 +69,9 @@ The data baing stored in the sd card is very simple. I am just taking the record
     5,  123216.00,  51.539694,  -000.046470
     6,  123217.00,  51.539693,  -000.046467
     
-    Note* one of the problems in my code is that teh count starts when the arduino is connected to both the sd card reader adn the neo-6 module. If the satalites       connect when it has already tried will lead to the first number being the number of pulses since started. To restart the count push the button on the side of       the power input on the arduino. 
+    Note* one of the problems in my code is that teh count starts when the arduino is connected to both the sd card reader adn the neo-6 module. 
+    If the satalites connect when it has already tried will lead to the first number being the number of pulses since started. 
+    To restart the count push the button on the side ofthe power input on the arduino. 
     
 ![neo-6](src/Images/Modules/neo_6m_module.jpg)
 
