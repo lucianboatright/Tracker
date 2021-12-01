@@ -12,6 +12,7 @@ Below you can see some of my research and pictures of the modules I have used. I
 ### Modules
 #### Arduino + Neo-6m + Data logger
 Arduino linked up to the Neo-6m GPS module, the data logger module. At this part of the project, I am testing whether I can create a connection and save the NEMA strings to the data logger. This was a success though I need to work on how to store the data more cleanly as it currently creates and saves to a new file each time it is able to generate the correct NMEA string. 
+To start recording data power up the module using a power sorce. There will be a constant light on the arduino board showing power is on. Once The SD card is read and the file is created or found it will start pulsing data as the set timmer. This is not saveing data to the sd card yet, this is only stating that the hardware is all working. When the light starts flashing on the neo-6 module it states that the module has connected to the satilites and has positional data. At this point it will recive a signal strenth of 1 which will start the logging part of the nema string onto the sd card.
 ![arduino](src/Images/Modules/arduino_gps-data.jpg)
 
 #### Ne0-6m GPS module
@@ -45,7 +46,31 @@ The other NMEA sentences provide additional information sent from the GPS unit:
     $GPRMC – Essential GPS pvt (position, velocity, time) data - $GPRMC,170751.00,A,5132.37768,N,00002.78347,W,0.110,,240720,,,A*61
 
     $GPVTG – Velocity made good - $GPVTG,,T,,M,0.291,N,0.538,K,A*27
-
+    
+Strings being taken from module:
+    Lat: 51.539807
+    N/S: N
+    Lng: -000.046281
+    E/W: W
+    Fix: 1
+    Sats: 04
+    HDP: 4.67
+    Alt: 58.2
+    Metres: M
+    MSL: 45.5
+    error
+    Time: 153544.00
+    
+The data baing stored in the sd card is very simple. I am just taking the record number: time : longtitude: latitude:
+    1,  123212.00,  51.539684,  -000.046488
+    2,  123213.00,  51.539688,  -000.046481
+    3,  123214.00,  51.539697,  -000.046472
+    4,  123215.00,  51.539693,  -000.046473
+    5,  123216.00,  51.539694,  -000.046470
+    6,  123217.00,  51.539693,  -000.046467
+    
+    Note* one of the problems in my code is that teh count starts when the arduino is connected to both the sd card reader adn the neo-6 module. If the satalites       connect when it has already tried will lead to the first number being the number of pulses since started. To restart the count push the button on the side of       the power input on the arduino. 
+    
 ![neo-6](src/Images/Modules/neo_6m_module.jpg)
 
 #### SIM800L 
